@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using Tao.FreeGlut;
 using Tao.OpenGl;
 using Tao.Platform;
+using Vector;
 namespace diplom
 {
     public partial class Form1 : Form
@@ -315,6 +316,8 @@ namespace diplom
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            Vector2D A = new Vector2D(4, 9);
+            textBox1.Text = A.ToString();
 
         }
 

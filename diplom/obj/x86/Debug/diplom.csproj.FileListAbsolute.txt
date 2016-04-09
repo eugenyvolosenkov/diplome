@@ -1,0 +1,10 @@
+F:\git\diplom\diplom\bin\Debug\diplom.exe
+F:\git\diplom\diplom\bin\Debug\diplom.pdb
+F:\git\diplom\diplom\obj\x86\Debug\diplom.csprojResolveAssemblyReference.cache
+F:\git\diplom\diplom\obj\x86\Debug\diplom.Form1.resources
+F:\git\diplom\diplom\obj\x86\Debug\diplom.Properties.Resources.resources
+F:\git\diplom\diplom\obj\x86\Debug\diplom.csproj.GenerateResource.Cache
+F:\git\diplom\diplom\obj\x86\Debug\diplom.exe
+F:\git\diplom\diplom\obj\x86\Debug\diplom.pdb
+F:\git\diplom\diplom\bin\Debug\Vector.dll
+F:\git\diplom\diplom\bin\Debug\Vector.pdb

@@ -1,0 +1,4 @@
+F:\git\diplom\DiplomVector\bin\x86\Debug\Vector.dll
+F:\git\diplom\DiplomVector\bin\x86\Debug\Vector.pdb
+F:\git\diplom\DiplomVector\obj\x86\Debug\Vector.dll
+F:\git\diplom\DiplomVector\obj\x86\Debug\Vector.pdb
