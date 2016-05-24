@@ -130,64 +130,31 @@ namespace diplom
         }
         private void Render()
         {
-      /*      // очистка буфера цвета и буфера глубины 
+            // очистка буфера цвета и буфера глубины 
             Gl.glClear(Gl.GL_COLOR_BUFFER_BIT | Gl.GL_DEPTH_BUFFER_BIT);
             Gl.glClearColor(255, 255, 255, 1);
             // очищение текущей матрицы 
             Gl.glLoadIdentity();
 
             // установка черного цвета 
-            Gl.glColor3f(0, 0, 0);
+            Gl.glColor3f(1.0f, 0.0f, 0.0f);
+            Glu.GLUnurbs surface;
+            float[] vknots = { 0.5f, 0.0f, 0.1f };
+            float[] tknots = { 0.1f, 0.4f, 0.2f };
+            surface = Glu.gluNewNurbsRenderer();
+            float[,] points = {{-1.0f,-1.0f,-1.0f},{-1.0f,-1.0f,1.0f},{-1.0f,1.0f,1.0f},
+                                {-1.0f,1.0f,-1.0f},{1.0f,1.0f,-1.0f},{1.0f,1.0f,1.0f},
+                                {1.0f,-1.0f,1.0f},{1.0f,-1.0f,1.0f},{1.0f,-1.0f,-1.0f}};
+            Glu.gluBeginSurface(surface);
+            Glu.gluNurbsSurface(surface, 3, vknots, 3, tknots, 2, 1, points, 4, 4, Gl.GL_MAP2_VERTEX_4);
 
-            // помещаем состояние матрицы в стек матриц 
-            Gl.glPushMatrix();
-
-            // перемещаем камеру для более хорошего обзора объекта 
-            Gl.glTranslated(0, 0, -7);
-            // поворачиваем ее на 15 градусов 
-            Gl.glRotated(15, 1, 1, 0);
-
-            // помещаем состояние матрицы в стек матриц 
-            Gl.glPushMatrix();
-
-            // начинаем отрисовку объекта 
-            Gl.glBegin(Gl.GL_LINE_LOOP);
-
-            // геометрические данные мы берем из массива GeomObject 
-            // рисуем основание с помощью зацикленной линии 
-            Gl.glVertex3d(GeomObject[0, 0], GeomObject[0, 1], GeomObject[0, 2]);
-            Gl.glVertex3d(GeomObject[1, 0], GeomObject[1, 1], GeomObject[1, 2]);
-            Gl.glVertex3d(GeomObject[2, 0], GeomObject[2, 1], GeomObject[2, 2]);
-
-            // завершаем отрисовку примитивов 
-            Gl.glEnd();
-
-            // рисуем линии от вершин основания к вершине пирамиды 
-            Gl.glBegin(Gl.GL_LINES);
-
-            Gl.glVertex3d(GeomObject[0, 0], GeomObject[0, 1], GeomObject[0, 2]);
-            Gl.glVertex3d(GeomObject[3, 0], GeomObject[3, 1], GeomObject[3, 2]);
-
-            Gl.glVertex3d(GeomObject[1, 0], GeomObject[1, 1], GeomObject[1, 2]);
-            Gl.glVertex3d(GeomObject[3, 0], GeomObject[3, 1], GeomObject[3, 2]);
-
-            Gl.glVertex3d(GeomObject[2, 0], GeomObject[2, 1], GeomObject[2, 2]);
-            Gl.glVertex3d(GeomObject[3, 0], GeomObject[3, 1], GeomObject[3, 2]);
-
-            // завершаем отрисовку примитивов 
-            Gl.glEnd();
-
-            // возвращаем состояние матрицы 
-            Gl.glPopMatrix();
-
-            // возвращаем состояние матрицы 
-            Gl.glPopMatrix();
-
+            Glu.gluEndSurface(surface);
+            Glu.gluLookAt(3.0f, 3.0f, 3.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f);
             // отрисовываем геометрию 
             Gl.glFlush();
 
             // обновляем состояние элемента 
-            AnT.Invalidate();*/
+            AnT.Invalidate();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
